@@ -29,6 +29,7 @@ export const Section1 = () => {
                         height={442.29}
                         priority
                         className="opacity-100 rounded-full"
+
                     />
                 </div>
 
@@ -40,6 +41,7 @@ export const Section1 = () => {
                         height={116.49}
                         priority
                         className="opacity-100"
+
                     />
                 </div>
 
@@ -51,6 +53,7 @@ export const Section1 = () => {
                         height={442.29}
                         priority
                         className="opacity-100 rounded-full"
+
                     />
                 </div>
 

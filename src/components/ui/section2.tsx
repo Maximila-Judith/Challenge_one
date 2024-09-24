@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button"
 import {
     Card,
     CardContent,
-    CardDescription,
     CardFooter,
     CardHeader,
     CardTitle,
@@ -39,6 +38,7 @@ export function Section2() {
                                 height={213}
                                 priority
                                 className="opacity-100"
+
                             />
                         </CardTitle>
                     </CardHeader>
@@ -52,6 +52,7 @@ export function Section2() {
                                 height={24}
                                 priority
                                 className="opacity-100 font-semibold"
+
                             />
                             <span className="font-semibold">68</span>
                         </div>
@@ -71,6 +72,7 @@ export function Section2() {
                                 height={213}
                                 priority
                                 className="opacity-100"
+
                             />
                         </CardTitle>
                     </CardHeader>
@@ -84,6 +86,7 @@ export function Section2() {
                                 height={24}
                                 priority
                                 className="opacity-100 font-semibold"
+
                             />
                             <span className="font-semibold">68</span>
                         </div>
@@ -103,6 +106,7 @@ export function Section2() {
                                 height={213}
                                 priority
                                 className="opacity-100"
+
                             />
                         </CardTitle>
                     </CardHeader>
@@ -116,6 +120,7 @@ export function Section2() {
                                 height={24}
                                 priority
                                 className="opacity-100 font-semibold"
+
                             />
                             <span className="font-semibold">68</span>
                         </div>
@@ -135,6 +140,7 @@ export function Section2() {
                                 height={213}
                                 priority
                                 className="opacity-100"
+
                             />
                         </CardTitle>
                     </CardHeader>
@@ -148,6 +154,7 @@ export function Section2() {
                                 height={24}
                                 priority
                                 className="opacity-100 font-semibold"
+
                             />
                             <span className="font-semibold">68</span>
                         </div>

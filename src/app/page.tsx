@@ -30,6 +30,7 @@ export default function Home() {
                 height={36}
                 priority
                 className="opacity-100"
+
               />
             </a>
 
@@ -75,9 +76,9 @@ export default function Home() {
                     Sign up
                   </a>
                   <div className="my-2 md:my-0 md:mx-2">
-                    <div className="w-10 h-px md:w-0.5 md:h-6 bg-gray-300 md:bg-black dark:bg-black"></div>
+                    <div className="w-full w-[0.5px] h-px md:w-1px md:h-6 bg-black md:bg-black dark:bg-black"></div>
                   </div>
-                  <a className="py-2 px-6 inline-flex items-center font-medium text-sm rounded-full bg-black text-white hover:bg-blue-700 focus:outline-none" href="#">
+                  <a className="py-2 px-6 inline-flex items-center font-medium text-sm rounded-full bg-black text-white focus:outline-none" href="#">
                     Connect Wallet
                   </a>
                 </div>
