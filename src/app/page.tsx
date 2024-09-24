@@ -1,100 +1,133 @@
+'use client'
+import { Section1 } from "@/components/ui/section1";
+import { Section2 } from "@/components/ui/section2";
+import { Section3 } from "@/components/ui/section3";
+import { Section4 } from "@/components/ui/section4";
 import Image from "next/image";
+import React from "react"
+import { useState } from 'react';
+
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  }
+
+  return (
+    <div>
+
+      <header className="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full bg-[#F8F8F8]">
+        <nav className="relative max-w-[85rem] w-full mx-auto md:flex md:items-center md:justify-between md:gap-3 py-2 px-4 sm:px-6 lg:px-0">
+          <div className="flex justify-between items-center gap-x-1">
+            <a className="dark:text-black flex-none font-semibold text-xl text-black focus:outline-none focus:opacity-80 dark:text-white" href="#">
+              <Image
+                src="/Frame.svg"
+                alt="icon 1"
+                width={36}
+                height={36}
+                priority
+                className="opacity-100"
+              />
+            </a>
+
+            <button
+              type="button"
+              className="hs-collapse-toggle md:hidden relative size-9 flex justify-center items-center font-medium text-[12px] rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+              onClick={toggleMenu}
+              aria-expanded={isMenuOpen}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-menu">
+                <line x1="4" x2="20" y1="12" y2="12" />
+                <line x1="4" x2="20" y1="6" y2="6" />
+                <line x1="4" x2="20" y1="18" y2="18" />
+              </svg>
+            </button>
+          </div>
+
+          <div className={`hs-collapse ${isMenuOpen ? 'block' : 'hidden'} overflow-hidden transition-all duration-300 basis-full grow md:block`}>
+            <div className="overflow-hidden overflow-y-auto max-h-[75vh] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500">
+              <div className="py-2 md:py-0 flex flex-col md:flex-row md:items-center gap-0.5 md:gap-60 justify-between items-center gap-x-1">
+                <div className="grow">
+                  <div className="flex flex-col md:flex-row md:justify-end md:items-center gap-0.5 md:gap-5 dark:text-black">
+                    <a className="dark:text-black p-2 flex items-center text-sm bg-gray-100 text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#" aria-current="page">
+                      Home
+                    </a>
+                    <a className="dark:text-black p-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                      Top sales
+                    </a>
+                    <a className="dark:text-black p-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                      Collections
+                    </a>
+                    <a className="dark:text-black p-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                      Our blog
+                    </a>
+                    <a className="dark:text-black p-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                      About us
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-x-2">
+                  <a className="dark:text-black py-[7px] px-2.5 inline-flex items-center font-medium text-sm" href="#">
+                    Sign up
+                  </a>
+                  <div className="my-2 md:my-0 md:mx-2">
+                    <div className="w-10 h-px md:w-0.5 md:h-6 bg-gray-300 md:bg-black dark:bg-black"></div>
+                  </div>
+                  <a className="py-2 px-6 inline-flex items-center font-medium text-sm rounded-full bg-black text-white hover:bg-blue-700 focus:outline-none" href="#">
+                    Connect Wallet
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+
+      <main className="flex flex-col gap-y-20">
+        <Section1 />
+        <Section2 />
+        <Section3 />
+        <Section4 />
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer className="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-5">
+          <div className="col-span-full lg:col-span-1">
+            <a className="flex-none font-semibold text-xl text-black focus:outline-none focus:opacity-80 dark:text-black" href="#" aria-label="Brand">
+              <Image
+                src="/Frame.svg"
+                alt="icon 1"
+                width={36}
+                height={36}
+                priority
+                className="opacity-100"
+              />
+            </a>
+          </div>
+
+        </div>
+
+        <div className="pt-5 mt-5 border-t border-gray-200 dark:border-neutral-700">
+          <div className="sm:flex sm:justify-between sm:items-center">
+            <div className="flex flex-wrap items-center gap-3">
+              <div className="space-x-4 text-sm">
+                <a className="inline-flex gap-x-2 text-gray-600 text-base font-semibold hover:text-gray-800 focus:outline-none focus:text-gray-800 dark:text-black" href="#">Create Explore & Collect Digital  NFT</a>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap justify-between items-center gap-3">
+              <div className="space-x-4 text-sm">
+                <a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800 dark:text-black" href="#">Privacy</a>
+                <a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800 dark:text-black" href="#">Terms & Conditions</a>
+                <a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800 dark:text-black" href="#">About us</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   );
