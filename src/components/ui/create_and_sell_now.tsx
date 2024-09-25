@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
 
-export const Section3 = () => {
+export const Create = () => {
     return (
-        <div className='flex flex-col w-[1130px] h-[298px] gap-y-5 mt-10'>
+        <div className='flex flex-col w-full p-5 mt-5 gap-y-5'>
             <h1 className='dark:text-black text-3xl font-semibold'>Create and Sell Now</h1>
-            <div className='flex flex-row justify-between items-center gap-x-5 '>
+            <div className='flex flex-col md:flex-row gap-y-5 justify-between items-center gap-x-5 '>
                 <div className="flex flex-col border rounded-3xl p-4 md:p-5 bg-[#E8E9EA]">
                     <Image
                         src="/Frame 129.svg"

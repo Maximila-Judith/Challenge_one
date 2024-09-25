@@ -1,11 +1,11 @@
 'use client'
-import { Section1 } from "@/components/ui/section1";
-import { Section2 } from "@/components/ui/section2";
-import { Section3 } from "@/components/ui/section3";
-import { Section4 } from "@/components/ui/section4";
+import { Hero } from "@/components/ui/hero";
+import { Create } from "@/components/ui/create_and_sell_now";
+import { Building } from "@/components/ui/build_your_NFT";
 import Image from "next/image";
 import React from "react"
 import { useState } from 'react';
+import { Collections } from "@/components/ui/our_collections";
 
 
 export default function Home() {
@@ -17,8 +17,7 @@ export default function Home() {
   }
 
   return (
-    <div>
-
+    <div className="">
       <header className="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full bg-[#F8F8F8]">
         <nav className="relative max-w-[85rem] w-full mx-auto md:flex md:items-center md:justify-between md:gap-3 py-2 px-4 sm:px-6 lg:px-0">
           <div className="flex justify-between items-center gap-x-1">
@@ -76,7 +75,7 @@ export default function Home() {
                     Sign up
                   </a>
                   <div className="my-2 md:my-0 md:mx-2">
-                    <div className="w-full w-[0.5px] h-px md:w-1px md:h-6 bg-black md:bg-black dark:bg-black"></div>
+                    <div className="w-full w-[2px] h-px md:w-1px md:h-6 bg-black md:bg-black dark:bg-black"></div>
                   </div>
                   <a className="py-2 px-6 inline-flex items-center font-medium text-sm rounded-full bg-black text-white focus:outline-none" href="#">
                     Connect Wallet
@@ -90,10 +89,10 @@ export default function Home() {
 
 
       <main className="flex flex-col gap-y-20">
-        <Section1 />
-        <Section2 />
-        <Section3 />
-        <Section4 />
+        <Hero />
+        <Collections />
+        <Create />
+        <Building />
       </main>
       <footer className="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-5">

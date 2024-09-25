@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
 
-export const Section1 = () => {
+export const Hero = () => {
     return (
-        <div className='flex flex-row w-[1200px] h-[607px] pr-20 items-center'>
-            <div className='w-[787px] h-[390px] flex flex-col gap-y-8'>
+        <div className='flex flex-col gap-y-10 lg:flex-row lg:items-center w-full lg:h-[607px] items-center'>
+            <div className='lg:w-1/2 h-[390px] flex flex-col gap-y-8 w-full m-5'>
                 <h1 className='text-black text-8xl'>See the NFT new world</h1>
                 <p className='text-black w-[412px] h-[48px]'>Vorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, di</p>
                 <div className='flex flex-row items-center gap-x-5'>
@@ -20,7 +20,7 @@ export const Section1 = () => {
                 </div>
             </div>
             {/* h-[588.19px] */}
-            <div className="flex flex-row items-center justify-center w-[596.89px] relative">
+            <div className="flex flex-row items-center justify-center lg:w-1/2 w-full relative">
                 <div className="relative top-[145.9px]">
                     <Image
                         src="/img/s1.png"
