@@ -3,7 +3,7 @@ import React from 'react'
 
 export const Hero = () => {
     return (
-        <div className='flex flex-col gap-y-10 lg:flex-row lg:items-center w-full lg:h-[607px] items-center'>
+        <div className='flex flex-col gap-y-20 lg:flex-row lg:items-center w-full lg:h-[607px] mt-5 items-center'>
             <div className='lg:w-1/2 h-[390px] flex flex-col gap-y-8 w-full m-5'>
                 <h1 className='text-black text-8xl'>See the NFT new world</h1>
                 <p className='text-black w-[412px] h-[48px]'>Vorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, di</p>
@@ -21,7 +21,7 @@ export const Hero = () => {
             </div>
             {/* h-[588.19px] */}
             <div className="flex flex-row items-center justify-center lg:w-1/2 w-full relative">
-                <div className="relative top-[145.9px]">
+                <div className="relative md:top-[145.9px] top-[130px]">
                     <Image
                         src="/img/s1.png"
                         alt="icon 1"
@@ -33,7 +33,7 @@ export const Hero = () => {
                     />
                 </div>
 
-                <div className="absolute top-[10px] left-[110px]">
+                <div className="absolute top-[8px] left-[80px] md:top-[10px] md:left-[110px]">
                     <Image
                         src="/img/Frame.png"
                         alt="icon 2"
@@ -45,7 +45,7 @@ export const Hero = () => {
                     />
                 </div>
 
-                <div className="relative top-0 left-[15px]">
+                <div className="relative top-0 left-[10px] md:top-0 md:left-[15px]">
                     <Image
                         src="/img/Rectangle 4.png"
                         alt="icon 3"
