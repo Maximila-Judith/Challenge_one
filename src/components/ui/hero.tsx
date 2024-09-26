@@ -20,7 +20,7 @@ export const Hero = () => {
                 </div>
             </div>
             {/* h-[588.19px] */}
-            <div className="flex flex-row items-center justify-center lg:w-1/2 w-full relative">
+            <div className="flex flex-row items-center justify-center pt-10 lg:w-1/2 w-full relative">
                 <div className="relative md:top-[145.9px] top-[130px]">
                     <Image
                         src="/img/s1.png"
